@@ -1,0 +1,42 @@
+@import "styles/theme.scss";
+:host {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  height: 64px;
+  align-items: center;
+  padding: 0 15px;
+  border-bottom: 1px solid var(--secondary-light-color);
+
+  .title {
+    text-transform: uppercase;
+  }
+  nav {
+    margin-left: auto;
+
+    a {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: var(--text-color);
+      text-decoration: none;
+      margin-left: 15px;
+
+      &:hover {
+        color: var(--primary-color);
+      }
+
+      &.active {
+        border-bottom: 1px solid var(--primary-color);
+      }
+    }
+  }
+
+
+  .mode-switcher {
+    margin-left: 20px;
+    cursor: pointer;
+  }
+
+}

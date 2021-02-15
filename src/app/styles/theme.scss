@@ -1,0 +1,22 @@
+:root {
+
+  --bg-color: #f8fafb;
+  --text-color: #272727;
+  --primary-color: #7e4aac;
+  --primary-light-color: #b587dd;
+  --secondary-color: #8c94a8;
+  --secondary-light-color: #b3b9c8;
+}
+
+$variables: (
+  --bg-color: var(--bg-color),
+  --text-color: var(--text-color),
+  --primary-color: var(--primary-color),
+  --primary-light-color: var(--primary-light-color),
+  --secondary-color: var(--secondary-color),
+  --secondary-light-color: var(--secondary-light-color),
+);
+
+@function var($variable) {
+  @return map-get($variables, $variable);
+}

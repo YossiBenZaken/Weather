@@ -1,0 +1,66 @@
+@import "../styles/shared";
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+  padding: 15px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .name {
+    font-size: 30px;
+  }
+  .headLine {
+    font-size: 20px;
+  }
+}
+
+.fav {
+  cursor: pointer;
+  &:hover {
+    color: var(--primary-light-color);
+  }
+}
+
+.forecasts {
+  @include forecastsStyles;
+}
+
+.autoComplete {
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  width: 300px;
+  height: 20px;
+  padding: 0;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.autocomplete-suggestions {
+  border: 1px solid var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 4px;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  margin-top: 25px;
+  overflow: auto;
+
+  .suggestion {
+    height: 25px;
+    padding-left: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: var(--primary-light-color);
+    }
+  }
+}
